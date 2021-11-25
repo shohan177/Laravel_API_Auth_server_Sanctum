@@ -27,20 +27,23 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($data as $item)
                                 <tr>
+
                                     <td>
                                         <div class="product-img bg-transparent border">
-                                            <img src="admin_asset/assets/images/icons/shoes.png" class="p-1" alt="">
+                                            <img src="{{ asset('admin_asset/assets/images/avatars/avatar-2.png') }}" class="p-1" alt="">
                                         </div>
                                     </td>
-                                    <td>Nike Sports NK</td>
-                                    <td>Mitchell Daniel</td>
+                                    <td>{{ $item->name }}</td>
+                                    <td>{{ $item->email }}</td>
                                     <td>#9668521</td>
                                     <td>ACTIVE</td>
                                     <td>
                                         <a href="javaScript:;" class="btn btn-sm btn-success radius-30">Call History</a>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
